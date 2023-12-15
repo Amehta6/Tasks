@@ -20,8 +20,6 @@ def enhance_image(image_data):
 
     clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
     enhanced_image = clahe.apply(thresh)
-
-    # Save enhanced image to a buffer
     enhanced_buffer = io.BytesIO()
     cv2.imwrite(enhanced_buffer, enhanced_image)
 
@@ -74,7 +72,6 @@ def process_image():
     if uploaded_file.filename == '':
         return jsonify({"error": "No selected file"}), 400
 
-    # Read the image data from the request
     image_data = uploaded_file.read()
     extracted_data = extract_data_from_image(image_data)
 
