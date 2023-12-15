@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result</h1>
+    <ul>
+        <li><strong>Application Number:</strong> {{ extracted_data.application_number }}</li>
+        <li><strong>Statement Number:</strong> {{ extracted_data.statement_number }}</li>
+        <li><strong>Village Name:</strong> {{ extracted_data.Village_name }}</li>
+        <li><strong>Survey Numbers:</strong> {{ extracted_data.survey_number | join(', ') }}</li>
+    </ul>
+    <a href="/">Back to Upload</a>
+</body>
+</html>
